@@ -22,15 +22,18 @@ try {
 //declaration. hey should take in a 'name' parameter, and return
 //the string "Hey " plus the name.
 
-//Code here
-
+function hey(name){
+    return `Hey ${name}`; 
+}
 
 ///////////////////Problem 2//////////////////
 //Create a function called hi, using a function
 //expression (without ES6). hi should take in a 'name' parameter, and return
 //the string "Hi " plus the name.
 
-//Code here
+var hi = function(name){ 
+  return `Hi ${name}`; 
+}
 
 
 ///////////////////Problem 3//////////////////
@@ -38,7 +41,7 @@ try {
 //function. hello should take in a 'name' parameter, and return
 //the string "Hello " plus the name.
 
-//Code here
+var hello = name => `Hello ${name}`; 
 
 
 ///////////////////Problem 4//////////////////
@@ -48,7 +51,8 @@ try {
 //with the string "Yay" and save the result of the function to a 
 //variable called funTimes.
 
-//Code here
+var fun = str => str + '!!!!!'; 
+var funTimes = fun('Yay'); 
 
 
 ///////////////////Problem 5//////////////////
@@ -75,7 +79,15 @@ function climb() {
   //to the console.
   console.log('function climb\'s local arguments var - ', arguments)
 
-  //CODE HERE - DO NOT TOUCH THE CODE ABOVE!
-
+  if(typeof arguments[0] === 'string' && arguments[1] !== true){
+    return 'On belay?'; 
+  }
+  else if (typeof arguments[0] === 'string' && arguments[1] !== false){
+    return 'Climbing!'
+  }
+  else{
+    return `Let's set up the belay rope before we climb.`
+  }
 }
+
 
