@@ -26,12 +26,12 @@ var book2 = {
 // Run the method checkOut on book1, and save it to a
 // variable named book1CheckOut.
 
-// CODE HERE
+const book1CheckOut =  book1.checkOut(book1); 
 
 
 // What is the context of running book1.checkOut()?
 // var q1Context = "explicit"
-// var q1Context = 'implicit';
+var q1Context = 'implicit';
 // var q1Context = "default"
 // var q1Context = "new"
 
@@ -40,11 +40,11 @@ var book2 = {
 // Run the function checkOut on book2, and save it to a
 // variable named book2CheckOut.
 
-// CODE HERE
+const book2CheckOut = checkOut.apply(book2); 
 
 
 // What is the context of running the function checkOut on book1?
-// var q2Context = 'explicit';
+var q2Context = 'explicit';
 // var q2Context = "implicit"
 // var q2Context = "default"
 // var q2Context = "new"
@@ -54,13 +54,13 @@ var book2 = {
 // Run the function checkout, and save it to a
 // variable named globalCheckOut.
 
-// CODE HERE
+const globalCheckOut = checkOut()
 
 
 // What is the context of running checkOut()?
 // var q3Context = "explicit"
 // var q3Context = "implicit"
-// var q3Context = 'default';
+var q3Context = 'default';
 // var q3Context = "new"
 
 
@@ -68,12 +68,12 @@ var book2 = {
 // Using the .apply method on the book1's checkOut function, run it using book2
 // as the argument. Save the result to a variable named book2CheckOut2.
 
-// CODE HERE
+const book2CheckOut2 = book1.checkOut.apply(book2); 
 
 
 // What is the context of applying the book1 method
 // checkOut to book2?
-// var q4Context = 'explicit';
+var q4Context = 'explicit';
 // var q4Context = "implicit"
 // var q4Context = "default"
 // var q4Context = "new"
@@ -98,7 +98,7 @@ function updatePerson(name, age, title) {
 // pass in the values "Anne Boleyn", 30, and "Queen of
 // England"; save the result to a variable named queenAnne.
 
-//Code here
+const queenAnne = updatePerson.call(person1 ,'Anne Boleyn', 30,'Queen of England');
 
 
 // Q2:
@@ -106,7 +106,7 @@ function updatePerson(name, age, title) {
 // pass in the values "Catherine of Aragon", 37, and "Former
 // Queen"; save the result to a variable named queenCatherine.
 
-//Code here
+const queenCatherine = updatePerson.apply(person2 , ['Catherine of Aragon' , 37,'Former Queen']);
 
 
 // /////////////////Problem 3//////////////////
@@ -135,19 +135,19 @@ var hampton = new Castle('Hampton Court', 'England', 'red', 'bricks', false);
 // var q1CastleContext = "explicit"
 // var q1CastleContext = "implicit"
 // var q1CastleContext = "default"
-// var q1CastleContext = 'new';
+var q1CastleContext = 'new';
 
 
 // Q2:
 // Run the getCastle method on chambord, and
 // save the result to a variable ran chambordInfo.
 
-// CODE HERE
+const chambordInfo = chambord.getCastle();
 
 
 // What was 'this' when you ran chambord.getCastle()?
 
 // var getCastleContext = "Castle"
-// var getCastleContext = 'chambord';
+var getCastleContext = 'chambord';
 // var getCastleContext = "new"
 // var getCastleContext = "window"
